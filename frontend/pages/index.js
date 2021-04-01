@@ -4,16 +4,22 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 
-const Home = ({ articles, categories, homepage }) => {
+const Home = ({ articles, categories, homepage, global }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.seo} />
-      <div className="uk-section">
+      <section className="row">
+        <div className={`section group`}>
+          <div className="col span_7_of_12">Column One</div>
+          <div className="col span_5_of_12">Column Two</div>
+        </div>
+      </section>
+      {/* <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{homepage.hero.title}</h1>
           <Articles articles={articles} />
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

@@ -1,0 +1,8 @@
+@import "../../../assets/css/variables";
+
+.Toolbar {
+    height: 56px;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, $color1, $color2);
+    display: flex;
+}

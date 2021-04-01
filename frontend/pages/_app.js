@@ -1,6 +1,7 @@
 import App from "next/app";
 import Head from "next/head";
 import "../assets/css/style.css";
+import "@fontsource/raleway/300.css"
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
@@ -15,7 +16,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head>
         <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Staatliches"
         />
@@ -25,7 +26,7 @@ const MyApp = ({ Component, pageProps }) => {
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" /> */}
       </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
