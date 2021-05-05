@@ -1,9 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACL,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,kDAAkD;EACpE,OAAO,EAAE,IAAI;CAChB",
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACL,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,kDAAkD;EACpE,KAAK,ECDA,OAAO;EDEZ,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,YAAY;CAChC",
     "sources": [
         "Toolbar.module.scss",
-        "../../../assets/css/_variables.scss"
+        "../../../assets/css/sass/abstracts/_variables.scss"
     ],
     "names": [],
     "file": "Toolbar.module.css"

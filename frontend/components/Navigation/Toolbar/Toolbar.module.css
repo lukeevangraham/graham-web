@@ -3,8 +3,14 @@
   width: 100%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1747A6), to(#0367A6));
   background-image: linear-gradient(to bottom right, #1747A6, #0367A6);
+  color: #F2F2F2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=Toolbar.module.css.map */
