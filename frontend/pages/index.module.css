@@ -1,14 +1,19 @@
 .header {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(23, 71, 166, 0.75)), to(rgba(3, 103, 166, 0.75))), url("/microphone.jpg");
-  background-image: linear-gradient(to bottom right, rgba(23, 71, 166, 0.75), rgba(3, 103, 166, 0.75)), url("/microphone.jpg");
+  width: 300rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(23, 71, 166, 0.8)), to(#1747a6)), url("/fiber.jpg");
+  background-image: linear-gradient(to bottom right, rgba(23, 71, 166, 0.8), #1747a6), url("/fiber.jpg");
   background-size: 50%;
   background-position: left;
-  padding: 7rem 3rem;
+  background-repeat: no-repeat;
+  padding: 3rem;
   height: 62rem;
-  width: 300rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
   position: relative;
+}
+
+.header .logo {
+  fill: #fff;
 }
 
 .header h1 {
@@ -37,8 +42,8 @@
             transform: translate(0, 0) rotate(-8deg);
   }
   100% {
-    -webkit-transform: translate(40rem, -46%) rotate(-8deg);
-            transform: translate(40rem, -46%) rotate(-8deg);
+    -webkit-transform: translate(50rem, -55%) rotate(-8deg);
+            transform: translate(50rem, -55%) rotate(-8deg);
   }
 }
 
@@ -48,13 +53,79 @@
             transform: translate(0, 0) rotate(-8deg);
   }
   100% {
-    -webkit-transform: translate(40rem, -46%) rotate(-8deg);
-            transform: translate(40rem, -46%) rotate(-8deg);
+    -webkit-transform: translate(50rem, -55%) rotate(-8deg);
+            transform: translate(50rem, -55%) rotate(-8deg);
   }
 }
 
 .headerWrap {
   -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
           filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.second {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(23, 71, 166, 0.8)), to(#1747a6)), url("/fiber.jpg");
+  background-image: linear-gradient(to bottom right, rgba(23, 71, 166, 0.8), #1747a6), url("/fiber.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #F2F2F2;
+  position: relative;
+  height: 80vh;
+}
+
+.second .aboveSVG {
+  padding: 3rem;
+  height: 100%;
+}
+
+.second .aboveSVG .topBrand {
+  font-size: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5rem max-content;
+      grid-template-columns: 5rem -webkit-max-content;
+      grid-template-columns: 5rem max-content;
+  grid-gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: .89;
+  text-transform: uppercase;
+}
+
+.second .aboveSVG .topBrand .webWorks {
+  font-size: 78%;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.second .aboveSVG .hero {
+  height: 100%;
+  padding-bottom: 10rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 7vw;
+}
+
+.second svg {
+  position: absolute;
+  bottom: -1px;
+  height: 10vw;
+  width: 100%;
+}
+
+.text {
+  margin: 3rem auto;
+  width: 70rem;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=index.module.css.map */

@@ -1,17 +1,27 @@
 @import "../assets/css/sass/abstracts/variables";
 
 .header {
-  background-image: linear-gradient(to bottom right, rgba($color1, .75), rgba($color2, .75)), url("/microphone.jpg");
+  width: 300rem;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color1, 0.8),
+      rgba($color1, 9)
+    ),
+    url("/fiber.jpg");
   background-size: 50%;
   background-position: left;
-//   background-image: url("/microphone.jpg");
-  padding: 7rem 3rem;
+  background-repeat: no-repeat;
+  //   background-image: url("/microphone.jpg");
+  padding: 3rem;
   height: 62rem;
-  width: 300rem;
   clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);
   // clip-path: path('M0,256L48,261.3C96,267,192,277,288,272C384,267,480,245,576,224C672,203,768,181,864,176C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z');
   // box-shadow: 0 0 15px black ;
   position: relative;
+
+  .logo {
+    fill: #fff;
+  }
 
   h1 {
     // margin-bottom: 19.1rem;
@@ -41,7 +51,7 @@
       }
 
       100% {
-        transform: translate(40rem, -46%) rotate(-8deg);
+        transform: translate(50rem, -55%) rotate(-8deg);
       }
     }
   }
@@ -49,4 +59,70 @@
 
 .headerWrap {
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.second {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color1, 0.8),
+      rgba($color1, 9)
+    ),
+    url("/fiber.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $color4;
+  position: relative;
+
+  height: 80vh;
+
+  .aboveSVG {
+    // font-size: 6rem;
+    padding: 3rem;
+    height: 100%;
+
+    .topBrand {
+      font-size: 2.5rem;
+      display: grid;
+      grid-template-columns: 5rem max-content;
+      grid-gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+      line-height: .89;
+      text-transform: uppercase;
+
+      .webWorks {
+        font-size: 78%;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+
+    .hero {
+      height: 100%;
+      padding-bottom: 10rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      text-align: center;
+      font-size: 7vw;
+    }
+  }
+  // padding: 3rem;
+  // height: 5rem;
+
+  svg {
+    position: absolute;
+    bottom: -1px;
+    height: 10vw;
+    width: 100%;
+    // margin-bottom: -60rem;
+  }
+}
+
+.text {
+  margin: 3rem auto;
+  width: 70rem;
+  font-size: 4rem;
 }

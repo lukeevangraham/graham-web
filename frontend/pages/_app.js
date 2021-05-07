@@ -2,6 +2,7 @@ import App from "next/app";
 import Head from "next/head";
 import "../assets/css/style.css";
 import "@fontsource/raleway/300.css"
+import "@fontsource/raleway/500.css"
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";

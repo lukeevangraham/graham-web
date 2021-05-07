@@ -12,11 +12,48 @@ const Home = ({ articles, categories, homepage, global }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={homepage.seo} />
-      <header className={classes.header}>
-        <Image src="/logoBlack.svg" height={50} width={50} />
-        {/* <h1>Wired for stories</h1> */}
+      {/* <header className={classes.header}>
+        <Image
+          src="/logoBlack.svg"
+          height={50}
+          width={50}
+          className={classes.logo}
+        />
         <div className={classes.name}>Graham Web Works</div>
-      </header>
+      </header> */}
+      <section className={classes.second}>
+        <div className={classes.aboveSVG}>
+          <div className={classes.topBrand}>
+            <Image
+              src="/logoBlack.svg"
+              height={50}
+              width={50}
+              className={classes.logo}
+            />
+            <div className={classes.topBrandName}>Graham<br /><span className={classes.webWorks}>Web Works</span></div>
+          </div>
+          <div className={classes.hero}>share your story</div>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#f2f2f2"
+            fillOpacity="1"
+            d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+      <section>
+        <div className={classes.text}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          a recusandae, atque velit eveniet et blanditiis assumenda, laborum
+          dicta similique nostrum cumque qui laudantium dolores doloremque
+          asperiores nihil cum voluptate!
+        </div>
+      </section>
       {/* <div className={`section group`}>
           <div className="col span_7_of_12">Column One</div>
           <div className="col span_5_of_12">Column Two</div>
