@@ -81,6 +81,9 @@
     // font-size: 6rem;
     padding: 3rem;
     height: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
 
     .topBrand {
       font-size: 2.5rem;
@@ -89,7 +92,7 @@
       grid-gap: 1.5rem;
       align-items: center;
       text-align: center;
-      line-height: .89;
+      line-height: 0.89;
       text-transform: uppercase;
 
       .webWorks {
@@ -99,9 +102,61 @@
       }
     }
 
+    .nav {
+      margin: auto 0;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+
+      .navItems {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+
+        li {
+          transition: all 0.2s;
+
+          &:hover {
+            transform: translatey(-0.2rem);
+          }
+
+          &:not(:last-child) {
+            margin-right: 3.5rem;
+          }
+
+          a {
+          }
+
+          a:link,
+          a:visited {
+            text-decoration: none;
+            color: $color1Lighter;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            background-image: linear-gradient(
+              120deg,
+              transparent 0%,
+              transparent 50%,
+              rgba($color1Darker, 0.5) 50%
+            );
+            background-size: 300%;
+
+            transition: all 0.4s;
+          }
+
+          a:hover,
+          a:active {
+            // color: orangered;
+            background-position: 100%;
+          }
+        }
+      }
+    }
+
     .hero {
       height: 100%;
       padding-bottom: 10rem;
+      grid-column: 1 / -1;
+
       display: grid;
       grid-template-columns: 1fr;
       align-items: center;
@@ -121,8 +176,45 @@
   }
 }
 
-.text {
-  margin: 3rem auto;
-  width: 70rem;
-  font-size: 4rem;
+.textSection {
+  position: relative;
+  padding-bottom: 6rem;
+
+  
+  .text {
+    margin: 3rem auto;
+    width: 70rem;
+    font-size: 4rem;
+    color: $color1Dark;
+  }
+  svg {
+    position: absolute;
+    bottom: -2px;
+    height: 10vw;
+    width: 100%;
+  }
+}
+
+.clients {
+  background-image: linear-gradient(to bottom, $color3Dark, $color3Darker);
+  padding: 3rem 5rem;
+  color: $color4;
+  text-align: center;
+  font-size: 2.5rem;
+  filter: brightness(80%);
+
+  .clientIcons {
+    width: 70%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+
+    .clientIcon {
+      width: 100%;
+      max-height: 7.5rem;
+      height: 7.5rem;
+      position: relative;
+    }
+  }
 }

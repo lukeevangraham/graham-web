@@ -70,7 +70,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #F2F2F2;
+  color: #f2f2f2;
   position: relative;
   height: 80vh;
 }
@@ -78,6 +78,14 @@
 .second .aboveSVG {
   padding: 3rem;
   height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
 }
 
 .second .aboveSVG .topBrand {
@@ -92,7 +100,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  line-height: .89;
+  line-height: 0.89;
   text-transform: uppercase;
 }
 
@@ -102,9 +110,57 @@
   text-transform: capitalize;
 }
 
+.second .aboveSVG .nav {
+  margin: auto 0;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+
+.second .aboveSVG .nav .navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+.second .aboveSVG .nav .navItems li {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.second .aboveSVG .nav .navItems li:hover {
+  -webkit-transform: translatey(-0.2rem);
+          transform: translatey(-0.2rem);
+}
+
+.second .aboveSVG .nav .navItems li:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+.second .aboveSVG .nav .navItems li a:link,
+.second .aboveSVG .nav .navItems li a:visited {
+  text-decoration: none;
+  color: #c5d6f7;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+  background-size: 300%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.second .aboveSVG .nav .navItems li a:hover,
+.second .aboveSVG .nav .navItems li a:active {
+  background-position: 100%;
+}
+
 .second .aboveSVG .hero {
   height: 100%;
   padding-bottom: 10rem;
+  grid-column: 1 / -1;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -123,9 +179,50 @@
   width: 100%;
 }
 
-.text {
+.textSection {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.textSection .text {
   margin: 3rem auto;
   width: 70rem;
   font-size: 4rem;
+  color: #113479;
+}
+
+.textSection svg {
+  position: absolute;
+  bottom: -2px;
+  height: 10vw;
+  width: 100%;
+}
+
+.clients {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#297897), to(#19485b));
+  background-image: linear-gradient(to bottom, #297897, #19485b);
+  padding: 3rem 5rem;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 2.5rem;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.clients .clientIcons {
+  width: 70%;
+  margin: 3rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+}
+
+.clients .clientIcons .clientIcon {
+  width: 100%;
+  max-height: 7.5rem;
+  height: 7.5rem;
+  position: relative;
 }
 /*# sourceMappingURL=index.module.css.map */

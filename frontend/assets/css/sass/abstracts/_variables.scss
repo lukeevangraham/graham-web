@@ -1,7 +1,29 @@
 // COLORS
 
-$color1: #1747A6;
-$color2: #0367A6;
-$color3: #3498BF;
-$color4: #F2F2F2;
-$color5: #59441C;
+$color1: #1747a6;
+$color1Lighter: lighten($color1, 50%);
+$color1Light: lighten($color1, 25%);
+$color1Dark: darken($color1, 10%);
+$color1Darker: darken($color1, 40%);
+
+$color2: #0367a6;
+$color2Lighter: lighten($color2, 50%);
+$color2Light: lighten($color2, 25%);
+$color2Dark: darken($color2, 10%);
+$color2Darker: darken($color2, 40%);
+
+$color3: #3498bf;
+$color3Lighter: lighten($color3, 50%);
+$color3Light: lighten($color3, 25%);
+$color3Dark: darken($color3, 10%);
+$color3Darker: darken($color3, 25%);
+
+$color4: #f2f2f2;
+
+$color5: #59441c;
+$color5Lighter: lighten($color5, 50%);
+$color5Light: lighten($color5, 25%);
+$color5Dark: darken($color5, 10%);
+$color5Darker: darken($color5, 40%);
+
+$colorBaseGray: rgb(107, 107, 107);
