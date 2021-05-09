@@ -70,7 +70,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #f2f2f2;
+  color: #fff;
   position: relative;
   height: 80vh;
 }
@@ -172,11 +172,15 @@
   font-size: 7vw;
 }
 
-.second svg {
+.second:after {
+  content: " ";
+  display: block;
+  height: 45px;
+  background-image: url("https://ecorelos.com/wp-content/uploads/2020/04/torn-border2.png");
   position: absolute;
-  bottom: -1px;
-  height: 10vw;
-  width: 100%;
+  bottom: -15px;
+  width: 300%;
+  left: -500px;
 }
 
 .textSection {
@@ -202,7 +206,7 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#297897), to(#19485b));
   background-image: linear-gradient(to bottom, #297897, #19485b);
   padding: 3rem 5rem;
-  color: #f2f2f2;
+  color: #fff;
   text-align: center;
   font-size: 2.5rem;
   -webkit-filter: brightness(80%);
