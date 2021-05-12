@@ -1,16 +1,67 @@
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-105vh) rotate(600deg);
+            transform: translateY(-105vh) rotate(600deg);
+  }
+}
+
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-105vh) rotate(600deg);
+            transform: translateY(-105vh) rotate(600deg);
+  }
+}
+
+@-webkit-keyframes contractTextSpace {
+  0% {
+    letter-spacing: 5px;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+@keyframes contractTextSpace {
+  0% {
+    letter-spacing: 5px;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
 .heroWrap {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(23, 71, 166, 0.8)), to(#1747a6)), url("/fiber.jpg");
-  background-image: linear-gradient(to bottom right, rgba(23, 71, 166, 0.8), #1747a6), url("/fiber.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#113479), to(#024874));
+  background-image: linear-gradient(to bottom right, #113479, #024874);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #fff;
+  color: #f0f0f0;
   position: relative;
   height: 80vh;
+  -webkit-clip-path: ellipse(120vw 100% at 50% 0%);
+          clip-path: ellipse(120vw 100% at 50% 0%);
 }
 
 .heroWrap .aboveSVG {
+  position: relative;
   height: 100%;
   display: -ms-grid;
   display: grid;
@@ -21,28 +72,148 @@
 
 .heroWrap .aboveSVG .hero {
   height: 100%;
+  width: 100%;
   padding-bottom: 10rem;
   grid-column: 1 / -1;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-columns: max-content;
+      grid-template-columns: -webkit-max-content;
+      grid-template-columns: max-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   text-align: center;
-  font-size: 7vw;
+  font-size: 4vw;
 }
 
-.heroWrap:after {
-  content: " ";
-  display: block;
-  height: 45px;
-  background-image: url("/torn-border2.png");
+.heroWrap .aboveSVG .hero .heroText {
+  display: inline-block;
+  -webkit-animation: contractTextSpace 2s ease-in-out;
+          animation: contractTextSpace 2s ease-in-out;
+}
+
+.heroWrap .aboveSVG .hero .name {
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f6fbfc), to(#91cbe1));
+  background-image: linear-gradient(to bottom right, #f6fbfc, #91cbe1);
+  background-clip: text;
+  color: transparent;
+}
+
+.heroWrap .aboveSVG .shapes {
   position: absolute;
-  bottom: -6px;
-  width: 300%;
-  left: -500px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.heroWrap .aboveSVG .shapes li {
+  position: absolute;
+  background-color: rgba(240, 240, 240, 0.15);
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  bottom: -15rem;
+  -webkit-animation: square 25s infinite;
+          animation: square 25s infinite;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(1) {
+  left: 83%;
+  width: 12rem;
+  height: 12rem;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(2) {
+  left: 11%;
+  width: 16rem;
+  height: 16rem;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-duration: 18s;
+          animation-duration: 18s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(3) {
+  left: 26%;
+  width: 16rem;
+  height: 16rem;
+  background-color: rgba(240, 240, 240, 0.2);
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(4) {
+  left: 86%;
+  width: 2rem;
+  height: 2rem;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 32s;
+          animation-duration: 32s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(5) {
+  left: 54%;
+  width: 8rem;
+  height: 8rem;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 23s;
+          animation-duration: 23s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(6) {
+  left: 62%;
+  width: 11rem;
+  height: 11rem;
+  background-color: rgba(240, 240, 240, 0.25);
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(7) {
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(8) {
+  left: 22%;
+  width: 9rem;
+  height: 9rem;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(9) {
+  left: 72%;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+}
+
+.heroWrap .aboveSVG .shapes li:nth-child(10) {
+  left: 80%;
+  width: 7rem;
+  height: 7rem;
+  background-color: rgba(240, 240, 240, 0.3);
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
 }
 
 .textSection {
@@ -68,9 +239,11 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#297897), to(#19485b));
   background-image: linear-gradient(to bottom, #297897, #19485b);
   padding: 8rem 5rem 3rem 5rem;
-  color: #fff;
+  color: #f0f0f0;
   text-align: center;
   font-size: 2.5rem;
+  -webkit-clip-path: ellipse(120vw 100% at 50% 100%);
+          clip-path: ellipse(120vw 100% at 50% 100%);
 }
 
 .clients .clientTitle {
@@ -95,19 +268,5 @@
   max-height: 7.5rem;
   height: 7.5rem;
   position: relative;
-}
-
-.clients:before {
-  content: " ";
-  display: block;
-  width: 300%;
-  height: 65px;
-  background-image: url("/torn-border2.png");
-  position: absolute;
-  margin-top: -9rem;
-  left: -500px;
-  z-index: 1;
-  -webkit-transform: rotate(180deg) scaleX(-1);
-          transform: rotate(180deg) scaleX(-1);
 }
 /*# sourceMappingURL=index.module.css.map */

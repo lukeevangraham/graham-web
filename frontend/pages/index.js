@@ -63,7 +63,23 @@ const Home = ({ articles, categories, homepage, global }) => {
               </li>
             </ul>
           </nav> */}
-          <div className={classes.hero}>share your story</div>
+          <div className={classes.hero}>
+            <div className={classes.heroText}>
+              Hi, I'm <span className={classes.name}>Luke Graham</span>. <br />I'm a full-stack web developer.
+            </div>
+          </div>
+          <ul className={classes.shapes}>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"

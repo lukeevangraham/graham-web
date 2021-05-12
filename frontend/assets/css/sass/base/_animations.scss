@@ -1,0 +1,21 @@
+@keyframes square {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-105vh) rotate(600deg);
+  }
+}
+
+@keyframes contractTextSpace {
+  0% {
+    letter-spacing: 5px;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
