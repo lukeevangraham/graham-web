@@ -17,6 +17,8 @@ html {
 
 body {
   padding: 1.9rem;
+  border-radius: 70px;
+  overflow: hidden;
 }
 
 /* --------------------------- */
@@ -36,5 +38,9 @@ h1, h2, h3 {
 h1 {
   color: #fff;
   font-size: 2.75rem;
+}
+
+.paragraph {
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=style.css.map */

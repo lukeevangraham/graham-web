@@ -2,6 +2,7 @@ import React from "react";
 import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Toolbar from "../components/Navigation/Toolbar/Toolbar";
 import Image from "next/image";
 import Link from "next/link";
 // import Logo from "../components/Logo/Logo"
@@ -11,7 +12,7 @@ import classes from "./index.module.scss";
 
 const Home = ({ articles, categories, homepage, global }) => {
   return (
-    <Layout categories={categories}>
+    <Layout categories={categories} home>
       <Seo seo={homepage.seo} />
       {/* <header className={classes.header}>
         <Image
@@ -22,9 +23,10 @@ const Home = ({ articles, categories, homepage, global }) => {
         />
         <div className={classes.name}>Graham Web Works</div>
       </header> */}
-      <section className={classes.second}>
+      <section className={classes.heroWrap}>
         <div className={classes.aboveSVG}>
-          <div className={classes.topBrand}>
+          <Toolbar home />
+          {/* <div className={classes.topBrand}>
             <Image
               src="/logoBlack.svg"
               height={50}
@@ -40,7 +42,7 @@ const Home = ({ articles, categories, homepage, global }) => {
           <nav className={classes.nav}>
             <ul className={classes.navItems}>
               <li>
-                <Link href="#">
+                <Link href="/blog">
                   <a>Blog</a>
                 </Link>
               </li>
@@ -60,7 +62,7 @@ const Home = ({ articles, categories, homepage, global }) => {
                 </Link>
               </li>
             </ul>
-          </nav>
+          </nav> */}
           <div className={classes.hero}>share your story</div>
         </div>
         {/* <svg

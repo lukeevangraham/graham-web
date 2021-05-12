@@ -1,16 +1,89 @@
 .Toolbar {
-  height: 56px;
-  width: 100%;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1747a6), to(#0367a6));
-  background-image: linear-gradient(to bottom right, #1747a6, #0367a6);
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 3rem;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+}
+
+.Toolbar .topBrand {
+  font-size: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5rem max-content;
+      grid-template-columns: 5rem -webkit-max-content;
+      grid-template-columns: 5rem max-content;
+  grid-gap: 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  text-align: center;
+  line-height: 0.89;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Toolbar .topBrand .webWorks {
+  font-size: 78%;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.Toolbar .nav {
+  margin: auto 0;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+
+.Toolbar .nav .navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+}
+
+.Toolbar .nav .navItems li {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Toolbar .nav .navItems li:hover {
+  -webkit-transform: translatey(-0.2rem);
+          transform: translatey(-0.2rem);
+}
+
+.Toolbar .nav .navItems li:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+.Toolbar .nav .navItems li a:link,
+.Toolbar .nav .navItems li a:visited {
+  text-decoration: none;
+  color: #c5d6f7;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+  background-size: 300%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.Toolbar .nav .navItems li a:hover,
+.Toolbar .nav .navItems li a:active {
+  background-position: 100%;
+}
+
+.home {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#5586e7), to(#113479));
+  background-image: linear-gradient(to bottom right, #5586e7, #113479);
 }
 /*# sourceMappingURL=Toolbar.module.css.map */

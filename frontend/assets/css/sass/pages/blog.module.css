@@ -1,0 +1,12 @@
+.categoryList ul {
+  list-style: none;
+  font-size: 1.6rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  justify-items: center;
+  width: 80%;
+  margin: 3rem auto;
+}
+/*# sourceMappingURL=blog.module.css.map */

@@ -1,10 +1,11 @@
 // import Nav from "./nav";
-import Toolbar from "./Navigation/Toolbar/Toolbar"
+import Toolbar from "./Navigation/Toolbar/Toolbar";
 
-const Layout = ({ children, categories, seo }) => (
+const Layout = ({ children, categories, seo, home }) => (
   <>
     {/* <Nav categories={categories} /> */}
-  {/* <Toolbar /> */}
+    {home ? null : <Toolbar home={false} /> }
+    {/* <Toolbar /> */}
     {children}
   </>
 );

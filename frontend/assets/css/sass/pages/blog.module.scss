@@ -1,0 +1,13 @@
+@import "../abstracts/variables";
+
+.categoryList {
+  ul {
+    list-style: none;
+    font-size: $default-font-size;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    justify-items: center;
+    width: 80%;
+    margin: 3rem auto;
+  }
+}
