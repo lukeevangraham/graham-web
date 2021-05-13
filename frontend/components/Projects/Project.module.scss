@@ -1,0 +1,59 @@
+@import "../../assets/css/sass/abstracts/variables";
+
+.project {
+  width: 90%;
+  margin: auto;
+//   height: 40rem;
+  //   background-color: orangered;
+  padding: 2rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+//   box-shadow: 0 0 5px 5px rgba($colorBaseGray, .7);
+background-image: linear-gradient(to bottom right, rgba($colorBaseGray, .08), rgba($colorBaseGray, .04));
+
+  .image {
+    position: relative;
+    grid-row: 1 / -1;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    // height: 100%;
+    // width: 400px;
+    // height: 400px;
+    // background-color: orangered;
+
+    .imageInner {
+      // border-radius: 5px;
+    }
+  }
+
+  .projectTextColumn {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    align-content: space-between;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    font-size: 1.8rem;
+
+    .title {
+      grid-row: 1 / 1;
+      font-size: 3.4rem;
+      font-weight: 500;
+      line-height: 1;
+      // margin-bottom: -5px;
+    }
+    .summary {
+      grid-row: 2 / 2;
+      margin: -5px 0 0 0;
+    }
+    .tools {
+      grid-row: 3 / 3;
+      display: grid;
+      grid-template-columns: min-content 70%;
+      grid-gap: 2rem;
+    }
+  }
+}

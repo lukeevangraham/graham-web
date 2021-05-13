@@ -3,14 +3,15 @@ import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Toolbar from "../components/Navigation/Toolbar/Toolbar";
+import Projects from "../components/Projects/Project"
 import Image from "next/image";
 import Link from "next/link";
 // import Logo from "../components/Logo/Logo"
 import { fetchAPI } from "../lib/api";
 
-import classes from "./index.module.scss";
+import classes from "../assets/css/sass/pages/index.module.scss";
 
-const Home = ({ articles, categories, homepage, global }) => {
+const Home = ({ articles, categories, homepage, projects, global }) => {
   return (
     <Layout categories={categories} home>
       <Seo seo={homepage.seo} />
@@ -93,6 +94,9 @@ const Home = ({ articles, categories, homepage, global }) => {
           ></path>
         </svg> */}
       </section>
+      <section className={classes.projectsSection}>
+        <Projects projects={projects} />
+      </section>
       <section className={classes.textSection}>
         <div className={classes.text}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
@@ -154,14 +158,15 @@ const Home = ({ articles, categories, homepage, global }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [articles, categories, homepage] = await Promise.all([
+  const [articles, categories, homepage, projects] = await Promise.all([
     fetchAPI("/articles?status=published"),
     fetchAPI("/categories"),
     fetchAPI("/homepage"),
+    fetchAPI("/projects"),
   ]);
 
   return {
-    props: { articles, categories, homepage },
+    props: { articles, categories, homepage, projects },
     revalidate: 1,
   };
 }

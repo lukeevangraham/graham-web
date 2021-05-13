@@ -1,0 +1,242 @@
+@import "../abstracts/variables";
+@import "../base/animations";
+
+.heroWrap {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color1Dark, 1),
+      rgba($color2Dark, 1)
+    );
+    // url("/fiber.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $color4;
+  position: relative;
+  height: 80vh;
+  clip-path: ellipse(120vw 100% at 50% 0%);
+
+  .aboveSVG {
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+
+    .hero {
+      height: 100%;
+      width: 100%;
+      padding-bottom: 10rem;
+      grid-column: 1 / -1;
+
+      display: grid;
+      grid-template-columns: max-content;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      font-size: 4vw;
+      
+      .heroText {
+        display: inline-block;
+        animation: contractTextSpace 2s ease-in-out;
+      
+        // text-shadow: 0 0 5px rgb(0, 0, 0);
+        // text-shadow: 0 0 2rem rgba(rgb(22, 22, 22), 0.8);
+      }
+
+      .name {
+        font-weight: 700;
+        background-image: linear-gradient(
+          to bottom right,
+          $color3Lighter,
+          $color3Light
+        );
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      li {
+        position: absolute;
+        background-color: rgba($color4, 0.15);
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        bottom: -15rem;
+        animation: square 25s infinite;
+        transition-timing-function: linear;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        
+
+        &:nth-child(1) {
+          left: 83%;
+          width: 12rem;
+          height: 12rem;
+        }
+
+        &:nth-child(2) {
+          left: 11%;
+          width: 16rem;
+          height: 16rem;
+
+          animation-delay: 4s;
+          animation-duration: 18s;
+        }
+
+        &:nth-child(3) {
+          left: 26%;
+          width: 16rem;
+          height: 16rem;
+          background-color: rgba($color4, 0.2);
+
+          animation-delay: 15s;
+          animation-duration: 13s;
+        }
+
+        &:nth-child(4) {
+          left: 86%;
+          width: 2rem;
+          height: 2rem;
+
+          animation-delay: 2s;
+          animation-duration: 32s;
+        }
+
+        &:nth-child(5) {
+          left: 54%;
+          width: 8rem;
+          height: 8rem;
+
+          animation-delay: 5s;
+          animation-duration: 23s;
+        }
+
+        &:nth-child(6) {
+          left: 62%;
+          width: 11rem;
+          height: 11rem;
+          background-color: rgba($color4, 0.25);
+
+          animation-delay: 12s;
+        }
+
+        &:nth-child(7) {
+          left: 50%;
+          width: 3rem;
+          height: 3rem;
+
+          animation-delay: 7s;
+        }
+
+        &:nth-child(8) {
+          left: 22%;
+          width: 9rem;
+          height: 9rem;
+
+          animation-delay: 1s;
+        }
+
+        &:nth-child(9) {
+          left: 72%;
+          width: 5rem;
+          height: 5rem;
+
+          animation-delay: 14s;
+        }
+
+        &:nth-child(10) {
+          left: 80%;
+          width: 7rem;
+          height: 7rem;
+          background-color: rgba($color4, 0.3);
+
+          animation-delay: 18s;
+        }
+      }
+    }
+  }
+
+  // &:after {
+  //   content: " ";
+  //   display: block;
+  //   height: 45px;
+  //   background-image: url("/torn-border2.png");
+  //   position: absolute;
+  //   bottom: -6px;
+  //   width: 300%;
+  //   left: -500px;
+  // }
+}
+
+.projectsSection {
+  padding: 7rem 0;
+
+}
+
+// .textSection {
+//   position: relative;
+//   padding-bottom: 6rem;
+//   // clip-path: ellipse(120vw 100% at 50% 0%);
+
+//   .text {
+//     margin: 3rem auto;
+//     width: 70rem;
+//     font-size: 4rem;
+//     color: $color1Dark;
+//   }
+//   svg {
+//     position: absolute;
+//     bottom: -2px;
+//     height: 10vw;
+//     width: 100%;
+//   }
+// }
+
+.clients {
+  background-image: linear-gradient(to bottom, $color3Dark, $color3Darker);
+  padding: 8rem 5rem 3rem 5rem;
+  color: $color4;
+  text-align: center;
+  font-size: 2.5rem;
+  clip-path: ellipse(120vw 100% at 50% 100%);
+
+  .clientTitle {
+    filter: brightness(80%);
+  }
+
+  .clientIcons {
+    filter: brightness(80%);
+    width: 70%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+
+    .clientIcon {
+      width: 100%;
+      max-height: 7.5rem;
+      height: 7.5rem;
+      position: relative;
+    }
+  }
+  // &:before {
+  //   content: " ";
+  //   display: block;
+  //   width: 300%;
+  //   height: 65px;
+  //   background-image: url("/torn-border2.png");
+  //   position: absolute;
+  //   margin-top: -9rem;
+  //   left: -500px;
+  //   z-index: 1;
+  //   transform: rotate(180deg) scaleX(-1);
+  // }
+}
