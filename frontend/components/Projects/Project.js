@@ -8,12 +8,14 @@ const Projects = ({ projects }) => (
     {projects.map((project) => (
       <div key={project.id} className={classes.project}>
         {console.log("PROJECT", project)}
-        <div className={classes.image}>
-          <Image
-            src={getStrapiMedia(project.image)}
-            layout="fill"
-            objectFit="contain"
-          />
+        <div className={classes.imageWrapper}>
+          <div className={classes.image}>
+            <Image
+              src={getStrapiMedia(project.image)}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
         <div className={classes.projectTextColumn}>
           <div className={classes.title}>{project.title}</div>

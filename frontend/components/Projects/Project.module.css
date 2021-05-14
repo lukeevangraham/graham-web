@@ -1,3 +1,21 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
 .project {
   width: 90%;
   margin: auto;
@@ -5,8 +23,9 @@
   border-radius: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 1fr;
-      grid-template-columns: 50% 1fr;
+  -ms-grid-columns: (minmax(min-content, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(-webkit-min-content, 1fr));
+      grid-template-columns: repeat(2, minmax(min-content, 1fr));
   grid-gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -15,12 +34,31 @@
   background-image: linear-gradient(to bottom right, rgba(107, 107, 107, 0.08), rgba(107, 107, 107, 0.04));
 }
 
-.project .image {
-  position: relative;
+@media only screen and (max-width: 56.25em) {
+  .project {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.project .imageWrapper {
+  width: 100%;
   grid-row: 1 / -1;
+}
+
+.project .imageWrapper .image {
+  position: relative;
   height: 100%;
+  width: 100%;
   border-radius: 5px;
   overflow: hidden;
+  padding-bottom: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project .imageWrapper .image {
+    grid-column: 1 / -1;
+  }
 }
 
 .project .projectTextColumn {
@@ -29,13 +67,11 @@
   -ms-grid-rows: (min-content)[4];
       grid-template-rows: repeat(4, -webkit-min-content);
       grid-template-rows: repeat(4, min-content);
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
   grid-gap: 1rem;
   font-size: 1.8rem;
+  height: 100%;
 }
 
 .project .projectTextColumn .title {
