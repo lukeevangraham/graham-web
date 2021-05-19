@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { Waypoint } from "react-waypoint";
 import { getStrapiMedia } from "../../../lib/media";
 import Button from "../../UI/Button/Button";
@@ -10,28 +10,29 @@ import classes from "./Project.module.scss";
 const Project = ({ project, index }) => {
   const [animateProject, setAnimateProject] = useState("");
 
-  let attachedClasses = [classes.project, animateProject];
+  let attachedClasses = [classes.project];
   index % 2 ? attachedClasses.push(classes.projectFlipped) : null;
-
-  console.log("PRO", project);
 
   return (
     <div key={project.id} className={attachedClasses.join(" ")}>
       <Link href={project.launchLink}>
-        <a className={classes.imageWrapper} target="_blank">
+        <a
+          className={[classes.imageWrapper, animateProject].join(" ")}
+          target="_blank"
+        >
           <Waypoint
             onEnter={() =>
-              setAnimateProject("animate__animated animate__bounce")
+              setAnimateProject("animate__animated animate__fadeInUp")
             }
-          >
-            <div className={classes.image}>
-              <Image
-                src={getStrapiMedia(project.image)}
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-          </Waypoint>
+            bottomOffset={"300px"}
+          />
+          <div className={classes.image}>
+            <Image
+              src={getStrapiMedia(project.image)}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </a>
       </Link>
       <div className={classes.projectTextColumn}>

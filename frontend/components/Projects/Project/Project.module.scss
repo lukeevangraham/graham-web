@@ -36,6 +36,7 @@
     width: 100%;
     // padding-bottom: 62.5%;
     grid-row: 1 / -1;
+    opacity: 0;
     // background-color: orangered;
     // position: relative;
 
@@ -51,7 +52,7 @@
       border-radius: 5px;
       overflow: hidden;
       box-shadow: none;
-      transition: all 0.2s;
+      transition: box-shadow, transform 0.2s;
       // height: 100%;
       // width: 400px;
       padding-bottom: 62.5%;
@@ -65,6 +66,10 @@
       .imageInner {
         // border-radius: 5px;
       }
+    }
+
+    .imageWrapper .animate__animated {
+      opacity: 1;
     }
   }
 
@@ -111,6 +116,7 @@
     box-shadow: 0 0 8px 1px rgba($colorBaseGrayDark, 0.8);
     transform: translateY(-0.5rem);
   }
+}
 
   .projectFlipped {
     // background-color: orangered;
@@ -129,4 +135,3 @@
       }
     }
   }
-}
