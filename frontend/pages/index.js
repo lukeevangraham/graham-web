@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Toolbar from "../components/Navigation/Toolbar/Toolbar";
 import Projects from "../components/Projects/Projects";
+import Contact from "../components/Contact/Contact";
 import Image from "next/image";
 import Link from "next/link";
 // import Logo from "../components/Logo/Logo"
@@ -65,9 +66,7 @@ const Home = ({ articles, categories, homepage, projects, global }) => {
             </ul>
           </nav> */}
           <div className={classes.hero}>
-            <div
-              className={`${classes.heroText}`}
-            >
+            <div className={`${classes.heroText}`}>
               Hi, I'm <span className={classes.name}>Luke Graham</span>. <br />
               I'm a full-stack web developer.
             </div>
@@ -119,7 +118,11 @@ const Home = ({ articles, categories, homepage, projects, global }) => {
           ></path>
         </svg> */}
       {/* </section> */}
-      <section className={classes.clients}>
+      <section className={classes.contact}>
+        <h2>Contact Me</h2>
+        <Contact />
+      </section>
+      {/* <section className={classes.clients}>
         <div className={classes.clientTitle}>Satisfied Customers</div>
         <div className={classes.clientIcons}>
           <div className={classes.clientIcon}>
@@ -144,7 +147,7 @@ const Home = ({ articles, categories, homepage, projects, global }) => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <div className={`section group`}>
           <div className="col span_7_of_12">Column One</div>
           <div className="col span_5_of_12">Column Two</div>

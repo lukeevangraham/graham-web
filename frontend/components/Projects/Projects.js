@@ -11,7 +11,7 @@ const Projects = ({ projects }) => {
       <h2>Projects</h2>
       <div className={classes.projectWrapper}>
         {projects.map((project, index) => (
-          <Project project={project} index={index} />
+          <Project project={project} index={index} key={project.id} />
         ))}
       </div>
     </>

@@ -1,0 +1,68 @@
+@import "../../assets/css/sass/abstracts/variables";
+@import "../../assets/css/sass/abstracts/mixins";
+
+.contactForm {
+  // background-color: orangered;
+
+  max-width: 100rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  grid-template-rows: repeat(auto-fit, min-content);
+//   align-items: flex-start;
+  grid-gap: 3rem;
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: $color5;
+    padding: 1.3rem;
+    border-radius: 5px;
+    background-color: rgba($color4, .8);
+    border: 3px solid transparent;
+    transition: all .3s;
+
+    @include respond(tab-port) {
+        grid-column: 1 / -1;
+        grid-row: 4 / -1;
+      }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px 4px $colorBaseGrayDarker;
+        border-bottom: 4px solid $color3;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color5;
+    }
+
+    &Name {
+        grid-row: 1 / 2;
+    }
+    &Email {
+        grid-row: 2 / 3;
+    }
+    &Phone {
+        grid-row: 3 / 4;
+    }
+  }
+
+  &__message {
+      grid-row: 1 / 4;
+      grid-column: 2 / -1;
+      height: 100%;
+      min-height: 28rem;
+
+      @include respond(tab-port) {
+        grid-column: 1 / -1;
+        grid-row: 4 / -1;
+      }
+  }
+}
+
+.sendButton {
+    margin-top: 4.5rem;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}

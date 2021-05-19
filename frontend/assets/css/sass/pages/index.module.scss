@@ -200,6 +200,15 @@
 //   }
 // }
 
+.contact {
+  background-image: linear-gradient(to bottom, $color2, $color2Dark);
+  padding: 8rem 5rem 11rem 5rem;
+  color: $color4;
+  text-align: center;
+  font-size: 2.5rem;
+  clip-path: ellipse(120vw 100% at 50% 100%);
+}
+
 .clients {
   background-image: linear-gradient(to bottom, $color3Dark, $color3Darker);
   padding: 8rem 5rem 3rem 5rem;
