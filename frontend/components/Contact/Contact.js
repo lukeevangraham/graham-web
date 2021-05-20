@@ -30,9 +30,9 @@ const Contact = () => {
       method: "POST",
     });
 
-      const result = await res.json();
-      console.log("RES: ", result)
-      result.status === 200 ? setMessageStatus(200) : null;
+    const result = await res.json();
+    console.log("RES: ", result);
+    result.status === 200 ? setMessageStatus(200) : null;
   };
 
   let messageForm = "";
@@ -85,9 +85,9 @@ const Contact = () => {
               placeholder="Your Message"
             />
           </div>
-          <div className={classes.sendButton}>
-            <button type="submit">Send Message</button>
-          </div>
+          <button type="submit" className={classes.sendButton}>
+            Send Message
+          </button>
         </form>
       );
       break;
