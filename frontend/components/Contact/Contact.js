@@ -15,21 +15,24 @@ const Contact = () => {
 
     setMessageStatus(1);
 
-    console.log(event.target);
-    console.log("HI THERE!")
+    console.log(event.target.name.value);
 
-    //   const res = await fetch("/api/contact", {
-    //       body: JSON.stringify({
-    //           name: event.target.name.value,
-    //           email: event.target.email.value,
-    //           phone: event.target.phone.value,
-    //           body: event.target.body.value
-    //       }),
-    //       header: {
-    //           "Content-Type": "application/json",
-    //       },
-    //       method: "POST",
-    //   })
+    const res = await fetch("/api/contact", {
+      body: JSON.stringify({
+        name: event.target.name.value,
+        email: event.target.email.value,
+        phone: event.target.phone.value,
+        body: event.target.body.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+      const result = await res.json();
+      console.log("RES: ", result)
+      result.status === 200 ? setMessageStatus(200) : null;
   };
 
   let messageForm = "";
