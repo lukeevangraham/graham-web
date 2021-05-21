@@ -27,8 +27,9 @@ const Project = ({ project, index }) => {
             bottomOffset={"300px"}
           />
           <div className={classes.image}>
+              {/* src={`https://admin.lukegraham.us${project.image.url}`} */}
             <Image
-              src={`https://admin.lukegraham.us${project.image.url}`}
+              src="https://admin.lukegraham.us/uploads/seat_Save_Big_1532c466f5.jpg"
               layout="fill"
               objectFit="contain"
             />
