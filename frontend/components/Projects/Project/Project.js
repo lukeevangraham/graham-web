@@ -28,7 +28,7 @@ const Project = ({ project, index }) => {
           />
           <div className={classes.image}>
             <Image
-              src={getStrapiMedia(project.image)}
+              src={`https://admin.lukegraham.us${project.image.url}`}
               layout="fill"
               objectFit="contain"
             />
