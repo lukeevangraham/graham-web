@@ -1,7 +1,8 @@
 export function getStrapiURL(path = "") {
   return `${
     // process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://admin.lukegraham.us"
+    "https://admin.lukegraham.us"
+    // process.env.NEXT_PUBLIC_STRAPI_API_URL || "https://admin.lukegraham.us"
   }${path}`;
 }
 
