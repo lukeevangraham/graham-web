@@ -99,6 +99,7 @@ const Home = ({ articles, categories, homepage, projects, global }) => {
       <section className={classes.projectsSection}>
         <Projects projects={projects} />
       </section>
+      <Image src="/microphone.jpg" width={200} height={200} />
       {/* <section className={classes.textSection}>
         <div className={classes.text}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
