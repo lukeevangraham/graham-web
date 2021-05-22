@@ -12,6 +12,6 @@ module.exports = {
         return config;
       },
       images: {
-        domains: ['admin.lukegraham.us', "res.cloudinary.com"],
+        domains: ['admin.lukegraham.us', 'res.cloudinary.com'],
       }
   }
