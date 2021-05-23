@@ -27,11 +27,13 @@ const Project = ({ project, index }) => {
             bottomOffset={"300px"}
           />
           <div className={classes.image}>
+            {/* <img src={getStrapiMedia(project.image)} alt="" style={{ objectFit: "contain" }} /> */}
             <Image
               src={getStrapiMedia(project.image)}
 
               layout="fill"
               objectFit="contain"
+              priority={true}
             />
           </div>
         </a>
