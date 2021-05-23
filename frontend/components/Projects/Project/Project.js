@@ -27,14 +27,28 @@ const Project = ({ project, index }) => {
             bottomOffset={"300px"}
           />
           <div className={classes.image}>
-            {/* <img src={getStrapiMedia(project.image)} alt="" style={{ objectFit: "contain" }} /> */}
-            <Image
+            <img
+              srcSet={`${getStrapiMedia(
+                project.image.formats.thumbnail
+              )} 245w, ${getStrapiMedia(
+                project.image.formats.large
+              )} 1000w, ${getStrapiMedia(
+                project.image.formats.medium
+              )} 750w, ${getStrapiMedia(
+                project.image.formats.small
+              )} 500w, ${getStrapiMedia(project.image)} 1472w`}
+              alt={project.image.alternativeText}
+              sizes="(max-width: 28.125em) 66vw, (max-width: 37.5em) 70vw (max-width: 56.25em) 74vw, (max-width: 75em) 37vw 544px"
+              className={classes.imageInner}
+              src={getStrapiMedia(project.image)}
+            />
+            {/* <Image
               src={getStrapiMedia(project.image)}
 
               layout="fill"
               objectFit="contain"
               priority={true}
-            />
+            /> */}
           </div>
         </a>
       </Link>
