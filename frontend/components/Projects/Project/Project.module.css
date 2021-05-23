@@ -1,0 +1,159 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
+.project {
+  width: 82%;
+  margin: auto;
+  padding: 3rem 2rem;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(min-content, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(-webkit-min-content, 1fr));
+      grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(120, 120, 120, 0.8)), color-stop(20%, #cccaca), to(#ebebeb));
+  background-image: linear-gradient(to bottom right, rgba(120, 120, 120, 0.8) 0, #cccaca 20%, #ebebeb 100%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.project .imageWrapper {
+  width: 100%;
+  grid-row: 1 / -1;
+  opacity: 0;
+}
+
+.project .imageWrapper .image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-box-shadow, -webkit-transform 0.2s;
+  transition: -webkit-box-shadow, -webkit-transform 0.2s;
+  transition: box-shadow, transform 0.2s;
+  transition: box-shadow, transform 0.2s, -webkit-box-shadow, -webkit-transform 0.2s;
+  padding-bottom: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .project .imageWrapper .image {
+    grid-column: 1 / -1;
+  }
+}
+
+.project .imageWrapper .image .imageInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project .imageWrapper .imageWrapper .animate__animated {
+  opacity: 1;
+}
+
+.project .projectTextColumn {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 1rem;
+  font-size: 1.8rem;
+  height: 100%;
+}
+
+.project .projectTextColumn .title {
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.project .projectTextColumn .summary {
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  margin: -5px 0 0 0;
+}
+
+.project .projectTextColumn .tools {
+  -ms-grid-row: 3;
+  grid-row: 3 / 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 70%;
+      grid-template-columns: -webkit-min-content 70%;
+      grid-template-columns: min-content 70%;
+  grid-gap: 2rem;
+}
+
+.project .projectTextColumn .tools .linkLabel {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.project .projectTextColumn .tools .links {
+  grid-column: 1 / -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  grid-gap: 1rem;
+}
+
+.project:hover .image {
+  -webkit-box-shadow: 0 0 8px 1px rgba(120, 120, 120, 0.8);
+          box-shadow: 0 0 8px 1px rgba(120, 120, 120, 0.8);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.projectFlipped {
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #525252), color-stop(27%, #cccaca), to(#ebebeb));
+  background-image: linear-gradient(to bottom left, #525252 0, #cccaca 27%, #ebebeb 100%);
+}
+
+.projectFlipped .imageWrapper {
+  grid-column: 2 / -1;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projectFlipped .imageWrapper {
+    grid-column: 1 / -1;
+  }
+}
+/*# sourceMappingURL=Project.module.css.map */

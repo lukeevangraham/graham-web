@@ -1,3 +1,21 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
 *,
 *::after,
 *::before {
@@ -19,6 +37,13 @@ body {
   padding: 1.9rem;
   border-radius: 70px;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+    border-radius: 0;
+  }
 }
 
 /* --------------------------- */

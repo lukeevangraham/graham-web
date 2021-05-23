@@ -1,0 +1,34 @@
+.Button, .Button:link, .Button:visited {
+  text-decoration: none;
+  color: #c5d6f7;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  background-image: linear-gradient(120deg, #0367a6 0%, #0367a6 50%, #024874 50%, #012942 100%);
+  background-size: 300%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.Button:hover {
+  background-position: 100%;
+}
+
+.Ghost {
+  -webkit-box-shadow: inset 0px 0px 0px 1px #0367a6;
+          box-shadow: inset 0px 0px 0px 1px #0367a6;
+  background-image: none;
+}
+
+.Ghost, .Ghost:link, .Ghost:visited {
+  background-image: none;
+  color: #0367a6;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #0367a6 50%, #012942 100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.Ghost:hover {
+  color: #c5d6f7;
+  background-position: 100%;
+}
+/*# sourceMappingURL=Button.module.css.map */

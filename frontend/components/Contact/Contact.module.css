@@ -1,0 +1,122 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
+.contactForm {
+  max-width: 100rem;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(45%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  -ms-grid-rows: (min-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-min-content);
+      grid-template-rows: repeat(auto-fit, min-content);
+  grid-gap: 3rem;
+}
+
+.contactForm__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #59441c;
+  padding: 1.3rem;
+  border-radius: 5px;
+  background-color: rgba(240, 240, 240, 0.8);
+  border: 3px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contactForm__input {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+  }
+}
+
+.contactForm__input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px 4px #525252;
+          box-shadow: 0 0 5px 4px #525252;
+  border-bottom: 4px solid #3498bf;
+}
+
+.contactForm__input::-webkit-input-placeholder {
+  color: #59441c;
+}
+
+.contactForm__inputName {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.contactForm__inputEmail {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.contactForm__inputPhone {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.contactForm__message {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  grid-column: 2 / -1;
+  height: 100%;
+  min-height: 28rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contactForm__message {
+    grid-column: 1 / -1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+}
+
+.sendButton {
+  margin-top: 4.5rem;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.sendButton, .sendButton:link, .sendButton:visited {
+  text-decoration: none;
+  color: #c5d6f7;
+  padding: 1.6rem 3.8rem;
+  border-radius: 4px;
+  border: none;
+  background-image: linear-gradient(120deg, #0367a6 0%, #0367a6 50%, #024874 50%, #012942 100%);
+  background-size: 300%;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.sendButton:hover {
+  background-position: 100%;
+}
+/*# sourceMappingURL=Contact.module.css.map */

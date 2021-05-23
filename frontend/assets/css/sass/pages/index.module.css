@@ -220,6 +220,17 @@
   padding: 7rem 0;
 }
 
+.contact {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0367a6), to(#024874));
+  background-image: linear-gradient(to bottom, #0367a6, #024874);
+  padding: 8rem 5rem 8rem 5rem;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 2.5rem;
+  -webkit-clip-path: ellipse(120vw 100% at 50% 100%);
+          clip-path: ellipse(120vw 100% at 50% 100%);
+}
+
 .clients {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#297897), to(#19485b));
   background-image: linear-gradient(to bottom, #297897, #19485b);

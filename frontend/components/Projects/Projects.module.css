@@ -1,0 +1,11 @@
+.projectWrapper {
+  max-width: 140rem;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (max-content)[auto-fit];
+      grid-template-rows: repeat(auto-fit, -webkit-max-content);
+      grid-template-rows: repeat(auto-fit, max-content);
+  grid-gap: 5rem;
+}
+/*# sourceMappingURL=Projects.module.css.map */
