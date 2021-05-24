@@ -34,5 +34,10 @@
         height: 3.5rem;
         width: 3.5rem;
         fill: $color4;
+        transition: fill .2s;
+
+        &:hover {
+            fill: $colorBaseGray;
+        }
     }
 }

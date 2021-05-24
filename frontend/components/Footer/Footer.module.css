@@ -68,5 +68,11 @@ ORDER:  Base + typography > general layout + grid > page layout > components
   height: 3.5rem;
   width: 3.5rem;
   fill: #f0f0f0;
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
+}
+
+.Footer__iconSingle:hover {
+  fill: #6b6b6b;
 }
 /*# sourceMappingURL=Footer.module.css.map */
