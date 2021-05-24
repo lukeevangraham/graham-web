@@ -266,7 +266,7 @@ ORDER:  Base + typography > general layout + grid > page layout > components
 .contact {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0367a6), to(#024874));
   background-image: linear-gradient(to bottom, #0367a6, #024874);
-  padding: 8rem 5rem 8rem 5rem;
+  padding: 8rem 5rem;
   color: #f0f0f0;
   text-align: center;
   font-size: 2.5rem;
@@ -285,6 +285,7 @@ ORDER:  Base + typography > general layout + grid > page layout > components
   .contact {
     -webkit-clip-path: ellipse(285vw 100% at 50% 100%);
             clip-path: ellipse(285vw 100% at 50% 100%);
+    padding: 8rem 2.5rem;
   }
 }
 
