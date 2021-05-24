@@ -92,6 +92,10 @@
     font-size: 1.8rem;
     height: 100%;
 
+    @include respond(sm-phone) {
+      font-size: 1.9rem;
+    }
+
     .title {
       grid-row: 1 / 1;
       font-size: 3.4rem;

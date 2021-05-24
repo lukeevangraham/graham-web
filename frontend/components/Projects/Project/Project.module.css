@@ -101,6 +101,12 @@ ORDER:  Base + typography > general layout + grid > page layout > components
   height: 100%;
 }
 
+@media only screen and (max-width: 28.125em) {
+  .project .projectTextColumn {
+    font-size: 1.9rem;
+  }
+}
+
 .project .projectTextColumn .title {
   -ms-grid-row: 1;
   grid-row: 1 / 1;
