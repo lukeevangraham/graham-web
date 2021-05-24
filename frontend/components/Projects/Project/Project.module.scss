@@ -25,6 +25,11 @@
   @include respond(tab-port) {
     grid-template-columns: 1fr;
   }
+
+  @include respond(sm-phone) {
+    width: 95%;
+    padding: 1.4rem 1rem;
+  }
   //   @include respond(phone) {
   //     grid-template-rows: minmax(min-content, 30rem);
   //   }
@@ -63,14 +68,13 @@
         grid-column: 1 / -1;
       }
 
-
       .imageInner {
         position: absolute;
         top: 0;
         left: 0;
         display: block;
         height: 100%;
-width: 100%;
+        width: 100%;
       }
     }
 
@@ -124,20 +128,20 @@ width: 100%;
   }
 }
 
-  .projectFlipped {
-    // background-color: orangered;
-    background-image: linear-gradient(
-      to bottom left,
-      rgba($colorBaseGrayDarker, 1) 0,
-      rgba($colorBaseGrayLight, 1) 27%,
-      rgba($colorBaseGrayLighter, 1) 100%
-    );
+.projectFlipped {
+  // background-color: orangered;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba($colorBaseGrayDarker, 1) 0,
+    rgba($colorBaseGrayLight, 1) 27%,
+    rgba($colorBaseGrayLighter, 1) 100%
+  );
 
-    .imageWrapper {
-      grid-column: 2 / -1;
+  .imageWrapper {
+    grid-column: 2 / -1;
 
-      @include respond(tab-port) {
-        grid-column: 1 / -1;
-      }
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
     }
   }
+}

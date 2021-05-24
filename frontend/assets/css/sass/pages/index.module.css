@@ -1,3 +1,21 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
 @-webkit-keyframes square {
   0% {
     -webkit-transform: translateY(0);
@@ -8,7 +26,6 @@
             transform: translateY(-105vh) rotate(600deg);
   }
 }
-
 @keyframes square {
   0% {
     -webkit-transform: translateY(0);
@@ -60,6 +77,20 @@
           clip-path: ellipse(120vw 100% at 50% 0%);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .heroWrap {
+    -webkit-clip-path: ellipse(156vw 100% at 50% 0%);
+            clip-path: ellipse(156vw 100% at 50% 0%);
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .heroWrap {
+    -webkit-clip-path: ellipse(200vw 100% at 50% 0%);
+            clip-path: ellipse(200vw 100% at 50% 0%);
+  }
+}
+
 .heroWrap .aboveSVG {
   position: relative;
   height: 100%;
@@ -93,6 +124,18 @@
   display: inline-block;
   -webkit-animation: contractTextSpace 2s ease-in-out;
           animation: contractTextSpace 2s ease-in-out;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heroWrap .aboveSVG .hero .heroText {
+    font-size: 5.5vw;
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .heroWrap .aboveSVG .hero .heroText {
+    font-size: 6vw;
+  }
 }
 
 .heroWrap .aboveSVG .hero .name {
@@ -229,6 +272,20 @@
   font-size: 2.5rem;
   -webkit-clip-path: ellipse(120vw 100% at 50% 100%);
           clip-path: ellipse(120vw 100% at 50% 100%);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .contact {
+    -webkit-clip-path: ellipse(211vw 100% at 50% 100%);
+            clip-path: ellipse(211vw 100% at 50% 100%);
+  }
+}
+
+@media only screen and (max-width: 28.125em) {
+  .contact {
+    -webkit-clip-path: ellipse(285vw 100% at 50% 100%);
+            clip-path: ellipse(285vw 100% at 50% 100%);
+  }
 }
 
 .clients {
