@@ -1,0 +1,72 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
+.Footer {
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #322610), color-stop(500%, black));
+  background-image: linear-gradient(to bottom right, #322610 0, black 500%);
+  font-size: 1.8rem;
+  color: #f0f0f0;
+  padding: 6rem 26rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(min-content, max-content))[2];
+      grid-template-columns: repeat(2, minmax(-webkit-min-content, -webkit-max-content));
+      grid-template-columns: repeat(2, minmax(min-content, max-content));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .Footer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding: 6rem;
+  }
+}
+
+.Footer__icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (min-content)[2];
+      grid-template-columns: repeat(2, -webkit-min-content);
+      grid-template-columns: repeat(2, min-content);
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .Footer__icons {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+}
+
+.Footer__iconSingle {
+  height: 3.5rem;
+  width: 3.5rem;
+  fill: #f0f0f0;
+}
+/*# sourceMappingURL=Footer.module.css.map */

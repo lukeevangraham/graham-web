@@ -1,0 +1,38 @@
+@import "../../assets/css/sass/abstracts/variables";
+@import "../../assets/css/sass/abstracts/mixins";
+
+.Footer {
+    // background-color: $color5Dark;
+    background-image: linear-gradient(to bottom right, $color5Dark 0, $color5Darker 500%);
+    font-size: 1.8rem;
+    color: $color4;
+    padding: 6rem 26rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    justify-content: space-between;
+    text-align: center;
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+        padding: 6rem;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        grid-template-rows: 1;
+        justify-content: center;
+        grid-gap: 3rem;
+
+        @include respond(tab-port) {
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__iconSingle {
+        height: 3.5rem;
+        width: 3.5rem;
+        fill: $color4;
+    }
+}
