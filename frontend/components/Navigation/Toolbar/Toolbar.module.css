@@ -29,6 +29,12 @@ ORDER:  Base + typography > general layout + grid > page layout > components
       grid-template-rows: min-content 1fr;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .Toolbar {
+    padding: 1.7rem 1.5rem;
+  }
+}
+
 .Toolbar .topBrand {
   font-size: 2.5rem;
   display: -ms-grid;

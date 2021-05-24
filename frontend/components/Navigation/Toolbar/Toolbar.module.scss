@@ -8,6 +8,10 @@
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content 1fr;
 
+    @include respond(tab-port) {
+      padding: 1.7rem 1.5rem;
+    }
+
   .topBrand {
     font-size: 2.5rem;
     display: grid;
