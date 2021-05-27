@@ -9,13 +9,23 @@ import { getStrapiMedia } from "../../lib/media";
 import classes from "../../assets/css/sass/pages/articleSlug.module.scss";
 
 const Article = ({ article, categories }) => {
-  const imageUrl = getStrapiMedia(article.image);
+  // const imageUrl = getStrapiMedia(article.image);
 
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
     shareImage: article.image,
     article: true,
+  };
+
+  const generateSrcSet = (formats) => {
+    let srcSetString = "";
+    Object.keys(formats).forEach((format) => {
+      srcSetString += `${getStrapiMedia(formats[format])} ${
+        formats[format].width
+      }w, `;
+    });
+    return srcSetString;
   };
 
   return (
@@ -25,15 +35,7 @@ const Article = ({ article, categories }) => {
         <img
           src={article.image.url}
           alt={article.image.alternativeText}
-          srcSet={`${getStrapiMedia(
-            article.image.formats.thumbnail
-          )} 245w, ${getStrapiMedia(
-            article.image.formats.large
-          )} 1000w, ${getStrapiMedia(
-            article.image.formats.medium
-          )} 750w, ${getStrapiMedia(
-            article.image.formats.small
-          )} 500w, ${getStrapiMedia(article.image)} 1472w`}
+          srcSet={generateSrcSet(article.image.formats)}
           sizes="98vw"
         />
         <h1>{article.title}</h1>
