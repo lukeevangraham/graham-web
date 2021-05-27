@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,GAAG;EACvB,qBAAqB,EAAE,GAAG;CAW3B;;AAfD,AAOE,YAPU,CAOV,GAAG,CAAC;EACF,QAAQ,EAAE,KAAK;CAChB;;AATH,AAWE,YAXU,CAWV,EAAE,CAAC;EACD,QAAQ,EAAE,KAAK;EACf,OAAO,EAAE,EAAE;CACZ",
+    "sources": [
+        "articleSlug.module.scss"
+    ],
+    "names": [],
+    "file": "articleSlug.module.css"
+}

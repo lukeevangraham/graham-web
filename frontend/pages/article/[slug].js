@@ -6,6 +6,8 @@ import Image from "../../components/image";
 import Seo from "../../components/seo";
 import { getStrapiMedia } from "../../lib/media";
 
+import classes from "../../assets/css/sass/pages/articleSlug.module.scss";
+
 const Article = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.image);
 
@@ -19,13 +21,21 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={seo} />
-      <div
-        id="banner"
-        className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-        data-src={imageUrl}
-        data-srcset={imageUrl}
-        data-uk-img
-      >
+      <div className={classes.ArticleSlug}>
+        <img
+          src={article.image.url}
+          alt={article.image.alternativeText}
+          srcSet={`${getStrapiMedia(
+            article.image.formats.thumbnail
+          )} 245w, ${getStrapiMedia(
+            article.image.formats.large
+          )} 1000w, ${getStrapiMedia(
+            article.image.formats.medium
+          )} 750w, ${getStrapiMedia(
+            article.image.formats.small
+          )} 500w, ${getStrapiMedia(article.image)} 1472w`}
+          sizes="98vw"
+        />
         <h1>{article.title}</h1>
       </div>
       <div className="uk-section">
