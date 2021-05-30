@@ -15,20 +15,31 @@ body {
 
 // HEADINGS
 
-h1, h2, h3 {
+h1, h2 {
     text-transform: uppercase;
 }
 
 h1 {
-    color: #fff;
-    font-size: 2.75rem;
+    // color: #fff;
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    // text-align: center;
 }
 
 h2 {
-    text-align: center;
-    font-size: 4.2rem;
-    margin-bottom: 5rem;
-    font-weight: 300;
+    // text-align: center;
+    font-size: 3.6rem;
+    margin: 3rem 0 .5rem 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: $color1;
+    // margin: 2rem 0 .5rem 0;
+    letter-spacing: .6px;
 }
 
 
