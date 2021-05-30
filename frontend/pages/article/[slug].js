@@ -41,32 +41,32 @@ const Article = ({ article, categories }) => {
         <h1>{article.title}</h1>
       </div>
       {/* <div className="uk-section"> */}
-        <div className={classes.Body}>
-          <ReactMarkdown source={article.content} escapeHtml={false} />
-          <hr className={classes.Body__divider} />
-          <div className={classes.Body__authorInfo}>
-            <div>
-              {article.author.picture && (
-                <Image
-                  image={article.author.picture}
-                  style={{
-                    position: "static",
-                    borderRadius: "50%",
-                    height: 30,
-                  }}
-                />
-              )}
-            </div>
-            <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By <strong> {article.author.name}</strong>
-              </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-              </p>
-            </div>
+      <div className={classes.Body}>
+        <ReactMarkdown source={article.content} escapeHtml={false} />
+        <hr className={classes.Body__divider} />
+        <div className={classes.Body__authorInfo}>
+          <div>
+            {article.author.picture && (
+              <Image
+                image={article.author.picture}
+                style={{
+                  position: "static",
+                  borderRadius: "50%",
+                  height: 30,
+                }}
+              />
+            )}
+          </div>
+          <div className="uk-width-expand">
+            <p className="uk-margin-remove-bottom">
+              By <strong> {article.author.name}</strong>
+            </p>
+            <p className="uk-text-meta uk-margin-remove-top">
+              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+            </p>
           </div>
         </div>
+      </div>
       {/* </div> */}
     </Layout>
   );

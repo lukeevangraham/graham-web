@@ -10,7 +10,7 @@ const Footer = () => (
         rel="noopener noreferrer"
       >
         <svg className={classes.Footer__iconSingle}>
-          <use xlinkHref="./sprite.svg#icon-github" />
+          <use xlinkHref="/sprite.svg#icon-github" />
         </svg>
       </a>
       <a
@@ -19,7 +19,7 @@ const Footer = () => (
         rel="noopener noreferrer"
       >
         <svg className={classes.Footer__iconSingle}>
-          <use xlinkHref="./sprite.svg#icon-linkedin" />
+          <use xlinkHref="/sprite.svg#icon-linkedin" />
         </svg>
       </a>
     </div>
