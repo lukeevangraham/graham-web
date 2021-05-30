@@ -1,3 +1,10 @@
+.projectHeading {
+  text-align: center;
+  font-size: 4.2rem;
+  margin-bottom: 5rem;
+  font-weight: 300;
+}
+
 .projectWrapper {
   max-width: 140rem;
   margin: auto;
