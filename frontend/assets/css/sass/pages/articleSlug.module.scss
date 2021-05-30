@@ -50,6 +50,11 @@
     align-items: center;
     margin-bottom: 4rem;
 
+    .authorImage {
+      display: flex;
+      align-items: center;
+    }
+
     p {
       margin: 0 0 0 1rem;
     }

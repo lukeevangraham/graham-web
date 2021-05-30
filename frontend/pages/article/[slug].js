@@ -45,14 +45,14 @@ const Article = ({ article, categories }) => {
         <ReactMarkdown source={article.content} escapeHtml={false} />
         <hr className={classes.Body__divider} />
         <div className={classes.Body__authorInfo}>
-          <div>
+          <div className={classes.authorImage}>
             {article.author.picture && (
               <Image
                 image={article.author.picture}
                 style={{
-                  position: "static",
                   borderRadius: "50%",
                   height: 30,
+                  margin: "auto"
                 }}
               />
             )}
