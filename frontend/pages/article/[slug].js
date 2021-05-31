@@ -18,16 +18,6 @@ const Article = ({ article, categories }) => {
     article: true,
   };
 
-  // const generateSrcSet = (formats) => {
-  //   let srcSetString = "";
-  //   Object.keys(formats).forEach((format) => {
-  //     srcSetString += `${getStrapiMedia(formats[format])} ${
-  //       formats[format].width
-  //     }w, `;
-  //   });
-  //   return srcSetString;
-  // };
-
   return (
     <Layout categories={categories}>
       <Seo seo={seo} />

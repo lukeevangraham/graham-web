@@ -25,11 +25,11 @@ const Toolbar = ({ home }) => (
     </Link>
     <nav className={classes.nav}>
       <ul className={classes.navItems}>
-        {/* <li>
+        <li>
           <Link href="/blog">
             <a>Blog</a>
           </Link>
-        </li> */}
+        </li>
         {/* <li>
           <Link href="#">
             <a>Projects</a>
