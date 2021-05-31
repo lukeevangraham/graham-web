@@ -7,3 +7,13 @@ export function getStrapiMedia(media) {
     : media.url;
   return imageUrl;
 }
+
+export function generateSrcSet(formats) {
+  let srcSetString = "";
+  Object.keys(formats).forEach((format) => {
+    srcSetString += `${getStrapiMedia(formats[format])} ${
+      formats[format].width
+    }w, `;
+  });
+  return srcSetString;
+}

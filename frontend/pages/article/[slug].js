@@ -4,7 +4,7 @@ import { fetchAPI } from "../../lib/api";
 import Layout from "../../components/layout";
 import Image from "../../components/image";
 import Seo from "../../components/seo";
-import { getStrapiMedia } from "../../lib/media";
+import { getStrapiMedia, generateSrcSet } from "../../lib/media";
 
 import classes from "../../assets/css/sass/pages/articleSlug.module.scss";
 
@@ -18,15 +18,15 @@ const Article = ({ article, categories }) => {
     article: true,
   };
 
-  const generateSrcSet = (formats) => {
-    let srcSetString = "";
-    Object.keys(formats).forEach((format) => {
-      srcSetString += `${getStrapiMedia(formats[format])} ${
-        formats[format].width
-      }w, `;
-    });
-    return srcSetString;
-  };
+  // const generateSrcSet = (formats) => {
+  //   let srcSetString = "";
+  //   Object.keys(formats).forEach((format) => {
+  //     srcSetString += `${getStrapiMedia(formats[format])} ${
+  //       formats[format].width
+  //     }w, `;
+  //   });
+  //   return srcSetString;
+  // };
 
   return (
     <Layout categories={categories}>

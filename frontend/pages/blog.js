@@ -2,13 +2,14 @@ import { fetchAPI } from "../lib/api";
 import Seo from "../components/seo";
 import Link from "next/link";
 import Layout from "../components/layout";
-import Articles from "../components/articles";
+// import Articles from "../components/articles";
+import Articles from "../components/Articles/Articles"
 
 import classes from "../assets/css/sass/pages/blog.module.scss";
 
 export async function getStaticProps() {
   const [articles, categories] = await Promise.all([
-    fetchAPI("/articles?status=published"),
+    fetchAPI("/articles?status=published&_sort=id:DESC"),
     fetchAPI("/categories"),
   ]);
 
