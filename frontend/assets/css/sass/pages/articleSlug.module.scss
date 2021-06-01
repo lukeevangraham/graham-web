@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 .ArticleSlug {
   position: relative;
@@ -27,6 +28,14 @@
     text-align: center;
     color: #fff;
     font-weight: 500;
+
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -37,8 +46,20 @@
   width: 65rem;
   margin: 6rem auto 0 auto;
 
+  @include respond(tab-port) {
+    width: 80%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
   p {
     margin-bottom: 2rem;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__divider {
@@ -57,6 +78,8 @@
 
     p {
       margin: 0 0 0 1rem;
+
+      
     }
   }
 }

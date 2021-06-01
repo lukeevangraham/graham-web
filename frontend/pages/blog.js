@@ -23,7 +23,7 @@ const Blog = ({ articles, categories }) => {
   return (
     <Layout categories={categories}>
       {/* <Seo seo={homepage.seo} /> */}
-      <div className={classes.categoryList}>
+      {/* <div className={classes.categoryList}>
         <ul>
           {categories.map((category) => (
             <li key={category.id}>
@@ -33,7 +33,7 @@ const Blog = ({ articles, categories }) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
       <Articles articles={articles} />
     </Layout>
   );

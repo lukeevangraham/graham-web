@@ -38,6 +38,13 @@ body {
     padding: 0;
     border-radius: 0;
   }
+
+  main {
+    @include respond(tab-port) {
+      padding: 0 1rem;
+      border-radius: 0;
+    }
+  }
 }
 
 /* --------------------------- */

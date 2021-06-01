@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACX,aAAa,EAAE,GAAG;EAElB,gBAAgB,EAAE,kDAA4E;EAC9F,QAAQ,EAAE,MAAM;EAChB,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,IAAI,CAAE,IAAG,CCwBP,OAAO;CDJ1B;;AAzBD,AAOE,YAPU,CAOV,GAAG,CAAC;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,KAAK;CACf;;AAEA,AAAD,mBAAQ,CAAC;EACP,SAAS,EAAE,MAAM;EACjB,KAAK,ECZI,OAAoB;EDa7B,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,GAAG;CACjB;;AAlBH,AAoBE,YApBU,AAoBT,MAAM,CAAC;EACN,MAAM,EAAE,OAAO;CAGhB",
+    "sources": [
+        "ArticleCard.module.scss",
+        "../../../assets/css/sass/abstracts/_variables.scss"
+    ],
+    "names": [],
+    "file": "ArticleCard.module.css"
+}

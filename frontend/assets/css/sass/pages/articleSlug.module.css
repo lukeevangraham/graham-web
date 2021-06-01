@@ -1,3 +1,21 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
 .ArticleSlug {
   position: relative;
 }
@@ -26,6 +44,18 @@
   font-weight: 500;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .ArticleSlug h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .ArticleSlug h1 {
+    font-size: 3.5rem;
+  }
+}
+
 .Body {
   color: #525252;
   font-size: 1.8rem;
@@ -34,8 +64,24 @@
   margin: 6rem auto 0 auto;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .Body {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .Body {
+    width: 100%;
+  }
+}
+
 .Body p {
   margin-bottom: 2rem;
+}
+
+.Body p img {
+  max-width: 100%;
 }
 
 .Body__divider {

@@ -1,0 +1,26 @@
+.ArticleCard {
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ebebeb), to(#cccaca));
+  background-image: linear-gradient(to bottom right, #ebebeb, #cccaca);
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 12px -6px #787878;
+          box-shadow: 0 0 12px -6px #787878;
+}
+
+.ArticleCard img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ArticleCard__title {
+  font-size: 2.5rem;
+  color: #113479;
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.ArticleCard:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=ArticleCard.module.css.map */
