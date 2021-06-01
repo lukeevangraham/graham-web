@@ -7,7 +7,7 @@ const Layout = ({ children, categories, seo, home }) => (
     {/* <Nav categories={categories} /> */}
     {home ? null : <Toolbar home={false} />}
     {/* <Toolbar /> */}
-    <main>{children}</main>
+    {children}
     <Footer />
   </>
 );

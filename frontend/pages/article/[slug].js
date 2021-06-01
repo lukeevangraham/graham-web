@@ -20,44 +20,46 @@ const Article = ({ article, categories }) => {
 
   return (
     <Layout categories={categories}>
-      <Seo seo={seo} />
-      <div className={classes.ArticleSlug}>
-        <img
-          src={article.image.url}
-          alt={article.image.alternativeText}
-          srcSet={generateSrcSet(article.image.formats)}
-          sizes="98vw"
-        />
-        <h1>{article.title}</h1>
-      </div>
-      {/* <div className="uk-section"> */}
-      <div className={classes.Body}>
-        <ReactMarkdown source={article.content} escapeHtml={false} />
-        <hr className={classes.Body__divider} />
-        <div className={classes.Body__authorInfo}>
-          <div className={classes.authorImage}>
-            {article.author.picture && (
-              <Image
-                image={article.author.picture}
-                style={{
-                  borderRadius: "50%",
-                  height: 30,
-                  margin: "auto"
-                }}
-              />
-            )}
-          </div>
-          <div className="uk-width-expand">
-            <p className="uk-margin-remove-bottom">
-              By <strong> {article.author.name}</strong>
-            </p>
-            <p className="uk-text-meta uk-margin-remove-top">
-              <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-            </p>
+      <main>
+        <Seo seo={seo} />
+        <div className={classes.ArticleSlug}>
+          <img
+            src={article.image.url}
+            alt={article.image.alternativeText}
+            srcSet={generateSrcSet(article.image.formats)}
+            sizes="98vw"
+          />
+          <h1>{article.title}</h1>
+        </div>
+        {/* <div className="uk-section"> */}
+        <div className={classes.Body}>
+          <ReactMarkdown source={article.content} escapeHtml={false} />
+          <hr className={classes.Body__divider} />
+          <div className={classes.Body__authorInfo}>
+            <div className={classes.authorImage}>
+              {article.author.picture && (
+                <Image
+                  image={article.author.picture}
+                  style={{
+                    borderRadius: "50%",
+                    height: 30,
+                    margin: "auto",
+                  }}
+                />
+              )}
+            </div>
+            <div className="uk-width-expand">
+              <p className="uk-margin-remove-bottom">
+                By <strong> {article.author.name}</strong>
+              </p>
+              <p className="uk-text-meta uk-margin-remove-top">
+                <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      {/* </div> */}
+        {/* </div> */}
+      </main>
     </Layout>
   );
 };
