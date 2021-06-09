@@ -23,7 +23,7 @@ const Layout = ({ children, categories, seo, home }) => {
       ) : (
         <Toolbar home={false} drawerToggleClicked={sideDrawerToggleHandler} showSideDrawer={showSideDrawer} />
       )}
-      <SideDrawer open={showSideDrawer} closed={sideDrawerClosedHandler} />
+      <SideDrawer home={home} open={showSideDrawer} closed={sideDrawerClosedHandler} />
       {/* <Toolbar /> */}
       {children}
       <Footer />

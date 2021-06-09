@@ -6,7 +6,7 @@ import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 const Toolbar = ({ home, drawerToggleClicked, showSideDrawer }) => (
   <header
     className={
-      home ? [classes.Toolbar, classes.Special].join(" ") : [classes.Toolbar, classes.home].join(" ")
+      home ? [classes.Toolbar, classes.Special].join(" ") : [classes.Toolbar, classes.notHome].join(" ")
     }
   >
     <Link href="/">

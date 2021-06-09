@@ -1,9 +1,9 @@
 import Link from "next/link";
 import classes from "./SideDrawer.module.scss";
 
-const SideDrawer = ({ open, closed }) => (
+const SideDrawer = ({ open, closed, home }) => (
   <>
-    <div className={classes.Wrapper}>
+    <div className={home ? classes.Wrapper : [classes.Wrapper, classes.notHome].join(" ")}>
       <div
         className={
           open
