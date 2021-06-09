@@ -2,15 +2,16 @@
 @import "../../../assets/css/sass/abstracts/mixins";
 
 .Toolbar {
-    padding: 3rem;
-    height: 100%;
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content 1fr;
+  padding: 3rem;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
 
-    @include respond(tab-port) {
-      padding: 1.7rem 1.5rem;
-    }
+  @include respond(tab-port) {
+    padding: 1.7rem 1.5rem;
+  }
 
   .topBrand {
     font-size: 2.5rem;
@@ -87,6 +88,14 @@
 }
 
 .home {
-    background-image: linear-gradient(to bottom right, $color1Light, $color1Dark);
-    // margin-bottom: 1.9rem;
+  background-image: linear-gradient(to bottom right, $color1Light, $color1Dark);
+  // margin-bottom: 1.9rem;
+}
+
+.Special {
+  position: absolute;
+  // grid-column: 1 / -1;
+  width: 100%;
+  // display: flex;
+  // background-color: black;
 }

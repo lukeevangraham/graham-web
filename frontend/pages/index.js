@@ -5,6 +5,7 @@ import Seo from "../components/seo";
 import Toolbar from "../components/Navigation/Toolbar/Toolbar";
 import Projects from "../components/Projects/Projects";
 import Contact from "../components/Contact/Contact";
+import DrawerToggle from "../components/Navigation/SideDrawer/DrawerToggle/DrawerToggle";
 import Image from "next/image";
 import Link from "next/link";
 // import Logo from "../components/Logo/Logo"
@@ -25,6 +26,7 @@ const Home = ({ articles, categories, homepage, projects, global }) => {
         />
         <div className={classes.name}>Graham Web Works</div>
       </header> */}
+      {/* <DrawerToggle /> */}
       <section className={classes.heroWrap}>
         <div className={classes.aboveSVG}>
           <Toolbar home />

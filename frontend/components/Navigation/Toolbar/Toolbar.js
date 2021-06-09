@@ -1,11 +1,12 @@
-import classes from "./Toolbar.module.css";
+import classes from "./Toolbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 
-const Toolbar = ({ home }) => (
+const Toolbar = ({ home, drawerToggleClicked, showSideDrawer }) => (
   <header
     className={
-      home ? `${classes.Toolbar} ` : [classes.Toolbar, classes.home].join(" ")
+      home ? [classes.Toolbar, classes.Special].join(" ") : [classes.Toolbar, classes.home].join(" ")
     }
   >
     <Link href="/">
@@ -23,6 +24,7 @@ const Toolbar = ({ home }) => (
         </div>
       </div>
     </Link>
+    <DrawerToggle clicked={drawerToggleClicked} sideDrawerShown={showSideDrawer} />
     <nav className={classes.nav}>
       <ul className={classes.navItems}>
         <li>
