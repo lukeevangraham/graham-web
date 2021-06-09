@@ -45,10 +45,11 @@
       content: "";
       position: absolute;
       left: 0;
+      transition: all .2s;
     }
 
     &::before {
-      top: -0.7rem;
+      top: -0.8rem;
     }
 
     &::after {
@@ -59,13 +60,13 @@
       background-color: transparent;
 
       &::before {
-        // top: 0;
-        transform: rotate(135deg) translate(.5rem, -.5rem);
+        top: 0;
+        transform: rotate(135deg) ;
       }
 
       &::after {
-        // top: 0;
-        transform: rotate(-135deg) translate(.4rem, .5rem);
+        top: 0;
+        transform: rotate(-135deg) ;
       }
     }
   }
