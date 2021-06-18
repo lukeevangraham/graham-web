@@ -1,0 +1,100 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
+.DrawerToggle {
+  display: none;
+  position: relative;
+}
+
+.DrawerToggle__wrapper {
+  background-color: black;
+  z-index: 201;
+  position: relative;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.DrawerToggle__icon {
+  position: relative;
+}
+
+.DrawerToggle__icon, .DrawerToggle__icon::before, .DrawerToggle__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #f0f0f0;
+  display: inline-block;
+}
+
+.DrawerToggle__icon::before, .DrawerToggle__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.DrawerToggle__icon::before {
+  top: -0.8rem;
+}
+
+.DrawerToggle__icon::after {
+  top: 0.8rem;
+}
+
+.DrawerToggle__iconOpen {
+  background-color: transparent;
+}
+
+.DrawerToggle__iconOpen::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.DrawerToggle__iconOpen::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .DrawerToggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=DrawerToggle.module.css.map */

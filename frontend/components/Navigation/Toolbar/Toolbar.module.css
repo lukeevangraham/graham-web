@@ -19,6 +19,7 @@ ORDER:  Base + typography > general layout + grid > page layout > components
 .Toolbar {
   padding: 3rem;
   height: 100%;
+  overflow: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content 1fr;
@@ -112,8 +113,14 @@ ORDER:  Base + typography > general layout + grid > page layout > components
   background-position: 100%;
 }
 
-.home {
+.notHome {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#5586e7), to(#113479));
   background-image: linear-gradient(to bottom right, #5586e7, #113479);
+  position: relative;
+}
+
+.Special {
+  position: absolute;
+  width: 100%;
 }
 /*# sourceMappingURL=Toolbar.module.css.map */

@@ -1,100 +1,102 @@
 @import "../../../assets/css/sass/abstracts/variables";
 @import "../../../assets/css/sass/abstracts/mixins";
 
-.Wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.sideDrawerWrapper {
+}
 
-  .SideDrawer {
-    display: none;
+.SideDrawer {
+  // position: absolute;
+
+  // z-index: 200;
+
+  &Background {
+    position: fixed;
     background-image: linear-gradient(to bottom right, $color1, $color3);
-    position: absolute;
+    right: 2rem;
+    top: 2.9rem;
     width: 6rem;
     height: 6rem;
-    right: 2rem;
-    top: 2rem;
-    z-index: 200;
     border-radius: 50%;
     transition: all 0.8s ease-out;
+    z-index: 200;
+    overflow: hidden;
+    display: none;
+  }
 
-    @include respond(tab-port) {
+  @include respond(tab-port) {
+    display: block;
+
+    &Background {
       display: block;
     }
+  }
 
-    &__content {
-      z-index: 200;
-      color: $color4;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      font-size: 5rem;
+  &__content {
+    z-index: 200;
+    color: $color4;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    height: 100%;
+    width: 70%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        li {
-          list-style: none;
-          margin: auto;
-        }
-      }
-    }
-
-    &__content {
-      ul li a {
-        &:link,
-        &:visited {
-          text-decoration: none;
-          color: $color4;
-          text-transform: uppercase;
-        }
-
-        &:hover,
-        &:active {
-          // text-decoration: none;
-          color: $color3;
-        }
+      li {
+        list-style: none;
+        margin: auto;
       }
     }
   }
 
-  .Open {
-    transform: scale(80);
-    position: fixed;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   right: 0;
-  }
+  &__content {
+    ul li a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color4;
+        text-transform: uppercase;
+      }
 
-  .Close {
-    //   transform: translateY(-100%);
-  }
-
-  .OpenContent {
-    // background-color: red;
-    // opacity: 1;
-    transform: translateX(0);
-    position: fixed;
-  }
-
-  .ClosedContent {
-    // background-color: green;
-    // display: none;
-    // opacity: 0;
-    transform: translateX(-100%);
+      &:hover,
+      &:active {
+        // text-decoration: none;
+        color: $color3;
+      }
+    }
   }
 }
 
-.notHome {
-  top: 0rem;
+.Open ~ .SideDrawerBackground {
+  transform: scale(80);
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   right: 0;
+}
+
+.Close {
+  //   transform: translateY(-100%);
+}
+
+.OpenContent {
+  // background-color: red;
+  // opacity: 1;
+  transform: translateX(0);
+}
+
+.ClosedContent {
+  // background-color: green;
+  // display: none;
+  // opacity: 0;
+  transform: translateX(-100%);
 }

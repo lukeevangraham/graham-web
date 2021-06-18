@@ -1,0 +1,107 @@
+/*
+
+0 - 600px:    Phone
+600 - 900px:  Tablet portrait
+900 - 1200px: Tablet landscape
+[1200 - 1800] is where our normal styles apple
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px (default broswer font size)
+*/
+.SideDrawerBackground {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#1747a6), to(#3498bf));
+  background-image: linear-gradient(to bottom right, #1747a6, #3498bf);
+  right: 2rem;
+  top: 2rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  z-index: 200;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .SideDrawer {
+    display: block;
+  }
+}
+
+.SideDrawer__content {
+  z-index: 200;
+  color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  height: 100%;
+  width: 70%;
+  -webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-size: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.SideDrawer__content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.SideDrawer__content ul li {
+  list-style: none;
+  margin: auto;
+}
+
+.SideDrawer__content ul li a:link, .SideDrawer__content ul li a:visited {
+  text-decoration: none;
+  color: #f0f0f0;
+  text-transform: uppercase;
+}
+
+.SideDrawer__content ul li a:hover, .SideDrawer__content ul li a:active {
+  color: #3498bf;
+}
+
+.Open ~ .SideDrawerBackground {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
+.OpenContent {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.ClosedContent {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+/*# sourceMappingURL=SideDrawer.module.css.map */

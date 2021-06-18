@@ -1,7 +1,7 @@
 import classes from "./DrawerToggle.module.scss";
 
 const DrawerToggle = ({ clicked, sideDrawerShown }) => (
-  <div className={sideDrawerShown ? [classes.DrawerToggle, classes.Fixed].join(" ") : classes.DrawerToggle} onClick={clicked}>
+  <div className={classes.DrawerToggle} onClick={clicked}>
     <div className={classes.DrawerToggle__wrapper}>
       <span className={sideDrawerShown ? [classes.DrawerToggle__icon, classes.DrawerToggle__iconOpen].join(" ") : classes.DrawerToggle__icon}>&nbsp;</span>
     </div>

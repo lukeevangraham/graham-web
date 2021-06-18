@@ -111,6 +111,7 @@ ORDER:  Base + typography > general layout + grid > page layout > components
   -ms-grid-columns: max-content;
       grid-template-columns: -webkit-max-content;
       grid-template-columns: max-content;
+  grid-row: 1 / -1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
