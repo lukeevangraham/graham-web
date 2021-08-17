@@ -43,12 +43,12 @@ const Contact = () => {
     case 200:
       messageForm = (
         <div>
-          <h3>Your message was successfully delivered</h3>
+          <h3 className={classes.statusMessage}>Your message was successfully delivered</h3>
         </div>
       );
       break;
     case 1:
-      messageForm = <div>Sending...</div>;
+      messageForm = <div className={classes.statusMessage}>Sending...</div>;
       break;
     default:
       messageForm = (
