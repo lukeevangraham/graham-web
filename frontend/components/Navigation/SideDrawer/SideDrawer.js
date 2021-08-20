@@ -2,7 +2,7 @@ import Link from "next/link";
 import classes from "./SideDrawer.module.scss";
 
 const SideDrawer = ({ open, closed }) => (
-  <div classname={classes.sideDrawerWrapper}>
+  <div className={classes.sideDrawerWrapper}>
     <div
       className={
         open

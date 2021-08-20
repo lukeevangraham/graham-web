@@ -170,7 +170,7 @@ export async function getStaticProps() {
     fetchAPI("/articles?status=published"),
     fetchAPI("/categories"),
     fetchAPI("/homepage"),
-    fetchAPI("/projects"),
+    fetchAPI("/projects?_sort=displayOrder:ASC"),
   ]);
 
   return {
