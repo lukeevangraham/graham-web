@@ -18,6 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
     <>
       <Head>
         <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />
+        <meta name="theme-color" content="#1747a6" />
         {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Staatliches"
