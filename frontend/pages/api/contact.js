@@ -15,7 +15,7 @@ export default function handler(req, res) {
     });
 
     let info = await transporter.sendMail({
-      from: '"Graham Web Works" <donotreply@grahamwebdesign.com>',
+      from: '"Graham Web Works" <donotreply@grahamwebworks.com>',
       to: "luke.evan.graham@gmail.com",
       subject: "Message from grahamwebworks.com",
       text: `${req.body.name} (${req.body.email}, ${req.body.phone}) just sent this message via www.grahamwebworks.com:
