@@ -4,22 +4,23 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1MVERJESNY"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Head>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-1MVERJESNY"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-1MVERJESNY');
 `,
-          }}
-        ></script>
+            }}
+          ></script>
+        </Head>
         <body>
           <Main />
           <NextScript />
