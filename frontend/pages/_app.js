@@ -1,9 +1,9 @@
 import App from "next/app";
 import Head from "next/head";
 import "../assets/css/style.css";
-import "@fontsource/raleway/300.css"
-import "@fontsource/raleway/400.css"
-import "@fontsource/raleway/500.css"
+import "@fontsource/raleway/300.css";
+import "@fontsource/raleway/400.css";
+import "@fontsource/raleway/500.css";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
@@ -31,6 +31,17 @@ const MyApp = ({ Component, pageProps }) => {
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" /> */}
       </Head>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-1MVERJESNY"
+      ></script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1MVERJESNY');`}
+      </script>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
