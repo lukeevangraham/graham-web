@@ -30,18 +30,18 @@ const MyApp = ({ Component, pageProps }) => {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" /> */}
-      </Head>
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-1MVERJESNY"
-      ></script>
-      <script>
-        {`window.dataLayer = window.dataLayer || [];
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1MVERJESNY"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-1MVERJESNY');`}
-      </script>
+        </script>
+      </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
