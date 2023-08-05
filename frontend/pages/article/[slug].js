@@ -5,6 +5,7 @@ import Layout from "../../components/layout";
 import Image from "../../components/image";
 import Seo from "../../components/seo";
 import { getStrapiMedia, generateSrcSet } from "../../lib/media";
+import { useRouter } from "next/router";
 
 import classes from "../../assets/css/sass/pages/articleSlug.module.scss";
 
@@ -17,6 +18,12 @@ const Article = ({ article, categories }) => {
     shareImage: article.image,
     article: true,
   };
+
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <Layout categories={categories}>
@@ -73,7 +80,7 @@ export async function getStaticPaths() {
         slug: article.slug,
       },
     })),
-    fallback: false,
+    fallback: true,
   };
 }
 
