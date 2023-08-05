@@ -5,7 +5,7 @@ import Link from "next/link";
 const ArticleCard = ({ article }) => (
   <Link href={`/article/${article.slug}`}>
     <div className={classes.ArticleCard}>
-      {console.log("ARTICLE: ", article)}
+      {/* {console.log("ARTICLE: ", article)} */}
       <img
         src={getStrapiMedia(article.image)}
         alt={article.image.alternativeText}

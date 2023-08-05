@@ -10,16 +10,16 @@ import { useRouter } from "next/router";
 import classes from "../../assets/css/sass/pages/articleSlug.module.scss";
 
 const Article = ({ article, categories }) => {
-  // const imageUrl = getStrapiMedia(article.image);
-
-  const seo = {
-    metaTitle: article.title,
-    metaDescription: article.description,
-    shareImage: article.image,
-    article: true,
-  };
-
   const router = useRouter();
+  let seo = {};
+  if (article) {
+    seo = {
+      metaTitle: article.title,
+      metaDescription: article.description,
+      shareImage: article.image,
+      article: true,
+    };
+  }
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -28,7 +28,7 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories}>
       <main>
-        <Seo seo={seo} />
+        {seo ? <Seo seo={seo} /> : null}
         <div className={classes.ArticleSlug}>
           <img
             src={article.image.url}
