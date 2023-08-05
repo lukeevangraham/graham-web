@@ -9,7 +9,7 @@ import classes from "../assets/css/sass/pages/blog.module.scss";
 
 export async function getStaticProps() {
   const [articles, categories] = await Promise.all([
-    fetchAPI("/articles?status=published&_sort=id:DESC"),
+    fetchAPI("/articles?status=published&_sort=publishedAt:DESC"),
     fetchAPI("/categories"),
   ]);
 
